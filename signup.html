@@ -1,0 +1,96 @@
+<html>
+<head>
+<title> Signup Form Design Tutorial </title>   
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script>
+function formvalidate()
+{
+var uname = document.signup.username;
+var email = document.signup.email;
+var pass = document.signup.password;
+var pass2 = document.signip.password2;
+if(allLetter(uname))
+{
+if(ValidateEmail(email))
+{
+if(passid_validation(pass)
+{
+}
+}
+}
+}
+function allLetter(uname)
+{ 
+var letters = /^[A-Za-z]+$/;
+if(uname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Username must have alphabet characters only');
+uname.focus();
+return false;
+}
+}
+function passid_validation(pass)
+{
+var x = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/.
+if(pass.value.match(x))
+{
+return true;
+}
+else
+{
+alert("wrong pattern");
+pass.focus();
+}
+}
+function ValidateEmail(email)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(email.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false;
+}
+}
+
+}
+</script>
+</head>
+<body>
+
+    <div id="login-box">
+      <div class="left-box">
+        <h1> Sign Up</h1>
+<form name="signup">
+          
+          <input type="text" name="username" placeholder="Username"/>
+          <input type="text" name="email" placeholder="Email"/>
+          <input type="password" name="password" placeholder="Password"/>
+        
+          <input type="password" name="password2" placeholder="Retype password"/>
+        
+          <input type="submit" name="signup-button"  onclick="formvalidate()" value="Sign Up"/>
+      </form>  
+        </div>
+        <div class="right-box">
+          <span class="signinwith">Sign in with<br/>Social Network     </span>
+        
+        <button class="social facebook">Log in with Facebook</button>    
+        <button class="social twitter">Log in with Twitter</button> 
+        <button class="social google">Log in with Google+</button> 
+            
+        
+        </div>
+        <div class="or">OR</div>
+    </div>
+    
+</body>    
+</html>
